@@ -13,6 +13,7 @@ typedef struct format_t
 } format_t;
 
 int _putchar(char c);
+int _strlen(char *s);
 
 #endif /* _HOLBERTON_H_ */
 
