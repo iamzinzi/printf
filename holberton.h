@@ -1,5 +1,6 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
+#include <stdarg.h>
 
 /**
  * struct format_t - format specifier
@@ -9,17 +10,13 @@
 typedef struct format_t
 {
 	char *type;
-	void (*func)(va_list);
+	int (*func)(va_list, char *);
 } format_t;
 
+int _printf(char *format, ...);
+int print_char(va_list, char *buf);
 int _putchar(char c);
 int _strlen(char *s);
+int (*get_spec_func(char *s))(va_list ap, char *buf);
 
 #endif /* _HOLBERTON_H_ */
-
-/*
-void print_char(va_list args)
-{
-	write(1, va_arg(args, char), 1);
-}
-*/
