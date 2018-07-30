@@ -23,7 +23,15 @@ int _printf(char *format, ...)
 		{
 			/* if found '%', move to format specifier */
 			i++;
-			count += get_spec_func(&format[i])(ap, buf);
+			if (format[i] == '%')
+			{
+				_putchar('%');
+				count++;
+			}
+			else
+			{
+				count += get_spec_func(&format[i])(ap, buf);
+			}
 
 		}
 		else
