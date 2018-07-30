@@ -4,7 +4,13 @@
 #include "holberton.h"
 
 #define MAXSIZE 1024
-
+/**
+ * _printf - prints output according to the format specified.
+ * @format: character string containing format specifiers,
+ * which causes printing of the next successive argument.
+ *
+ * Return: The number of chacters printed. Return -1 on error.
+ */
 int _printf(char *format, ...)
 {
 	int count, i;
@@ -27,6 +33,10 @@ int _printf(char *format, ...)
 			{
 				_putchar('%');
 				count++;
+			}
+			else if (format[i] != 'c' && format[i] != 's')
+			{
+				return (-1);
 			}
 			else
 			{
