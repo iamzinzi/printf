@@ -10,7 +10,7 @@ int print_number(va_list ap)
 {
 	int num, n, length, exp;
 
-       	num = va_arg(ap, int);
+	num = va_arg(ap, int);
 	length = 0;
 	if (num < 0)
 	{
