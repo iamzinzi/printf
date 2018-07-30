@@ -14,6 +14,8 @@ int (*get_spec_func(char *s))(va_list ap, char *buf)
 	format_t formats[] = {
 		{"c", print_char},
 		{"s", print_string},
+		{"d", print_number},
+		{"i", print_number},
 		{NULL, NULL}
 	};
 
