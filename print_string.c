@@ -3,9 +3,11 @@
 
 int print_string(va_list ap, char *buf)
 {
-	int i = 0;
+	int i;
+	char *s;
 	(void)buf;
-	char *s = va_arg(ap, char *);
+
+	s =va_arg(ap, char *);
 
 	for (i = 0; s[i] != '\0'; i++)
 	{

@@ -3,8 +3,11 @@
 
 int print_char(va_list ap, char *buf)
 {
+	int c;
 	(void)buf;
-	int c = va_arg(ap, int);
+
+	c = va_arg(ap, int);
+
 	write(1, &c, 1);
 	return (1);
 }
