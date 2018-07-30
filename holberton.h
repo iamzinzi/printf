@@ -10,7 +10,7 @@
 typedef struct format_t
 {
 	char *type;
-	int (*func)(va_list, char *);
+	int (*func)(va_list);
 } format_t;
 
 int _printf(char *format, ...);
