@@ -34,6 +34,10 @@ int _printf(char *format, ...)
 				_putchar('%');
 				count++;
 			}
+			else if (format[i] != 'c' && format[i] != 's')
+			{
+				return (-1);
+			}
 			else
 			{
 				count += get_spec_func(&format[i])(ap, buf);
