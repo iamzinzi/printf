@@ -10,6 +10,9 @@ int _printf(char *format, ...)
 	char buf[MAXSIZE];
 	va_list ap;
 
+	if (format == NULL)
+		return (-1);
+
 	va_start(ap, format);
 
 	count = 0;
