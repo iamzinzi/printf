@@ -3,16 +3,14 @@
 /**
  * print_number - print number
  * @ap: va_list containing variadic arguments
- * @buf: buffer to store characters
  *
  * Return: number of characters printed
  */
-int print_number(va_list ap, char *buf)
+int print_number(va_list ap)
 {
 	int num, n, length, exp;
-	(void)buf;
 
-	num = va_arg(ap, int);
+       	num = va_arg(ap, int);
 	length = 0;
 	if (num < 0)
 	{

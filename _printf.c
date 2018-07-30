@@ -3,7 +3,6 @@
 #include <unistd.h>
 #include "holberton.h"
 
-#define MAXSIZE 1024
 /**
  * _printf - prints output according to the format specified.
  * @format: character string containing format specifiers,
@@ -14,7 +13,6 @@
 int _printf(char *format, ...)
 {
 	int count, i;
-	char buf[MAXSIZE];
 	va_list ap;
 
 	if (format == NULL)
@@ -36,7 +34,7 @@ int _printf(char *format, ...)
 			}
 			else
 			{
-				count += get_spec_func(&format[i])(ap, buf);
+				count += get_spec_func(&format[i])(ap);
 			}
 
 		}
