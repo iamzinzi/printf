@@ -17,9 +17,10 @@ int _printf(char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			/* if found, move to format specifier */
+			/* if found '%', move to format specifier */
 			i++;
 			count += get_spec_func(&format[i])(ap, buf);
+
 		}
 		else
 		{
