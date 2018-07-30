@@ -17,17 +17,14 @@ int _putchar(char c)
 /**
  * print_char - print a character to stdout
  * @ap: va_list containing variadic arguments
- * @buf: buffer to store character
  *
  * Return: num of characters printed (always 1)
  */
-int print_char(va_list ap, char *buf)
+int print_char(va_list ap)
 {
 	int c;
-	(void)buf;
 
 	c = va_arg(ap, int);
-
 	write(1, &c, 1);
 	return (1);
 }
@@ -35,15 +32,13 @@ int print_char(va_list ap, char *buf)
 /**
  * print_string - print a string to stdout
  * @ap: va_list containing variadic arguments
- * @buf: buffer to store string
  *
  * Return: num of characters printed
  */
-int print_string(va_list ap, char *buf)
+int print_string(va_list ap)
 {
 	int i;
 	char *s;
-	(void)buf;
 
 	s = va_arg(ap, char *);
 
