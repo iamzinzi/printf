@@ -42,6 +42,8 @@ int print_string(va_list ap)
 
 	s = va_arg(ap, char *);
 
+	if (s == NULL)
+		s = "(null)";
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		_putchar(s[i]);
