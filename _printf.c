@@ -37,6 +37,10 @@ int _printf(char *format, ...)
 			{
 				count += get_spec_func(&format[i])(ap);
 			}
+			else if (format[i] == ' ')
+			{
+				return (-1);
+			}
 			else
 			{
 				_putchar('%');

@@ -2,12 +2,12 @@
 .SH NAME
 _printf - _printf is a recreation of the printf function.
 .SH SYNOPSIS
-.B #include 'holberton.h'
+\fB#include "holberton.h"\fR
 
 \fBint _printf(const char *\fR\fIformat\fR\fB, ...);\fR
 
 .SH DESCRIPTION
-\fB_printf()\fRwrites to the standard output according to a format specifier. The specifieres are listed below.
+\fB_printf()\fR writes to the standard output according to a format specifier. The specifiers are listed below.
 
 .B Return Value
 .RS 3
@@ -56,7 +56,7 @@ int main (void)
 
 {
 
-_printf("Programming is %s!", "fun");
+_printf("Programming is %s!\n", "fun");
 
 return (0);
 
@@ -69,5 +69,7 @@ Output : "Programming is fun!"
 
 .SH SEE ALSO
 .B printf(3)
+.SH BUGS
+No known bugs.
 .SH AUTHOR
 Jinji Zhang, Robert Glatzel
