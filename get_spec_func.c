@@ -9,7 +9,7 @@
  * Return: pointer to a function corresponding to format specifier provided
  * as parameter.
  */
-int (*get_spec_func(char *s))(va_list ap)
+int (*get_spec_func(const char *s))(va_list ap)
 {
 	format_t formats[] = {
 		{"c", print_char},

@@ -10,7 +10,7 @@
  *
  * Return: The number of chacters printed. Return -1 on error.
  */
-int _printf(char *format, ...)
+int _printf(const char *format, ...)
 {
 	int count, i;
 	va_list ap;
