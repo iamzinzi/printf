@@ -33,7 +33,8 @@ int _printf(char *format, ...)
 				count++;
 			}
 			else if (format[i] == 's' || format[i] == 'd' ||
-				 format[i] == 'i' || format[i] == 'c')
+				 format[i] == 'i' || format[i] == 'c' ||
+				 format[i] == 'r')
 			{
 				count += get_spec_func(&format[i])(ap);
 			}

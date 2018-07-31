@@ -16,6 +16,7 @@ int (*get_spec_func(char *s))(va_list ap)
 		{"s", print_string},
 		{"d", print_number},
 		{"i", print_number},
+		{"r", print_reverse},
 		{NULL, NULL}
 	};
 

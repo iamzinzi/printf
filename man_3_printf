@@ -32,7 +32,12 @@ The \fIint\fR argument is converted to an unsigned char, and the resulting chara
 
 .B s
 .RS 6
-The \fIconst char *\fR argument is expected to be a pointer to an array of character type (pointer to a string).  Characters from the array are written up to (but not including) a terminating null byte ('\0').
+The \fIconst char *\fR argument is expected to be a pointer to an array of character type (pointer to a string).  Characters from the array are written up to (but not including) a terminating null byte ('\\0').
+.RE
+
+.B r
+.RS 6
+The \fIconst char *\fR argument is expected to be a pointer to an array of character type (pointer to a string). Characters from the array are written in reverse from the end of the string (excluding the terminating null byte) to the beginning.
 .RE
 
 .B %
@@ -46,25 +51,26 @@ This program does not account for flag characters, field width, precision, or le
 .SH EXAMPLE
 .RS 3
 Print a sentence using conversion specifiers:
-
 .RE
 
 .RS 8
 #include "holberton.h"
-
+.br
 int main (void)
-
+.br
 {
-
-_printf("Programming is %s!\n", "fun");
-
+.br
+.RS 8
+_printf("Pr%dgram%cing is %s!\\n", 0, 'm', "fun");
+.br
 return (0);
-
+.RE
+.br
 }
 .RE
 
 .RS 3
-Output : "Programming is fun!"
+Output : "Pr0gramming is fun!"
 .RE
 
 .SH SEE ALSO

@@ -17,6 +17,7 @@ int _printf(char *format, ...);
 int print_char(va_list);
 int print_string(va_list ap);
 int print_number(va_list ap);
+int print_reverse(va_list ap);
 int _putchar(char c);
 int _strlen(char *s);
 int (*get_spec_func(char *s))(va_list ap);
