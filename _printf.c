@@ -32,11 +32,17 @@ int _printf(char *format, ...)
 				_putchar('%');
 				count++;
 			}
-			else
+			else if (format[i] == 's' || format[i] == 'd' ||
+				 format[i] == 'i' || format[i] == 'c')
 			{
 				count += get_spec_func(&format[i])(ap);
 			}
-
+			else
+			{
+				_putchar('%');
+				_putchar(format[i]);
+				count += 2;
+			}
 		}
 		else
 		{
