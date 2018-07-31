@@ -8,29 +8,36 @@
  */
 int print_number(va_list ap)
 {
-	int num, n, length, exp;
+	int num, length, exp;
+	unsigned int n, n_storage;
 
 	num = va_arg(ap, int);
 	length = 0;
+	n_storage = 0;
 	if (num < 0)
 	{
 		length++;
 		_putchar('-');
-		num *= -1;
+		n = num * -1;
+	}
+	else
+	{
+		n = num;
 	}
 
-	n = num;
 	exp = 1;
+	n_storage = n;
 	while (n > 9)
 	{
 		exp *= 10;
 		n /= 10;
 	}
 
+	n = n_storage;
 	while (exp)
 	{
-		_putchar(num / exp + '0');
-		num = num % exp;
+		_putchar(n / exp + '0');
+		n = n % exp;
 		exp /= 10;
 		length++;
 	}
