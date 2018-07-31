@@ -37,15 +37,20 @@ int _printf(char *format, ...)
 			{
 				count += get_spec_func(&format[i])(ap);
 			}
-			else if (format[i] == ' ')
+			else if (format[i] != '\0')
+			{
+				_putchar('%');
+				_putchar(format[i]);
+				count += 2;
+			}
+			else if (format[i] == '\0' && (i - 1) == 0)
 			{
 				return (-1);
 			}
 			else
 			{
 				_putchar('%');
-				_putchar(format[i]);
-				count += 2;
+				count++;
 			}
 		}
 		else
