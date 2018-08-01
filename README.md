@@ -38,4 +38,4 @@ print_number.c | file containing function to print integers
 _printf.c | custom printf function
 
 ## Author
-Jinji Zhang, Robert Glatzel
+[Jinji Zhang](https://twitter.com/hizinzi), [Robert Glatzel](https://twitter.com/rglatzell)
